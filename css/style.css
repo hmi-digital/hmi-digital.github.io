@@ -1,0 +1,455 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800|Roboto+Slab:100,300,400,700');
+body {
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 300;
+    font-size: 2em;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+    margin: 0;
+}
+
+
+/** Header Navigation **/
+
+header .navbar {
+    padding: 30px 0;
+    transition: all .5s ease-out;
+}
+
+header .navbar-default {
+    background-color: transparent;
+    border: none;
+}
+
+header .navbar-default .navbar-nav a {
+    color: white;
+    padding: 5px 8px;
+}
+
+header .navbar-default .navbar-nav a:hover {
+    color: #EEC856;
+}
+
+header .navbar-default .navbar-nav .active a {
+    font-weight: 700;
+    color: #EEC856;
+    background: transparent;
+    border-bottom: 4px solid #EEC856;
+    text-shadow: none;
+}
+
+header .navbar-default .navbar-nav .active a:hover {
+    color: #E15D5F;
+    background: transparent;
+    text-shadow: none;
+}
+
+
+/** Navbar Brand **/
+
+header .navbar-brand {
+    background: url(../images/hmilogo.png);
+    background-repeat: no-repeat;
+    /* by default background image is set to repeat */
+    background-position: 15px 0;
+    height: auto;
+}
+
+header .navbar-brand h1 {
+    color: white;
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 400;
+    padding-left: 105px;
+}
+
+header .navbar-brand span.subhead {
+    display: block;
+    font-family: "Roboto Slab", serif;
+    font-size: 0.6em;
+    font-weight: 100;
+}
+
+
+/** Navbar Toggle **/
+
+header .navbar-toggle {
+    background-color: #279182;
+}
+
+header .navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    header .navbar-collapse {
+        background-color: rgba(0, 0, 0, .5);
+        /* 0,0,0 is black color and 0.5 is transparecy half way */
+    }
+}
+
+
+/** Nav inbody **/
+
+header .inbody {
+    background: rgba(104, 73, 49, 0.9);
+}
+
+header .navbar.inbody {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+header .navbar.inbody .navbar-nav {
+    padding-top: 10px;
+}
+
+header .inbody .navbar-brand {
+    background-size: 43px;
+    background-position: top left;
+    margin-top: 5px;
+    padding-bottom: 0;
+    margin-left: 10px;
+}
+
+header .inbody .navbar-brand h1 {
+    font-size: 1.1em;
+    padding-left: 38px;
+}
+
+header .inbody .navbar-brand span.subhead {
+    display: none;
+}
+
+
+/** Carousel Fade **/
+
+.carousel.fade {
+    opacity: 1;
+}
+
+
+/* makes the opacity for all the item <img> to 0 */
+
+.carousel.fade .item {
+    transition: opacity ease-out .7s;
+    left: 0;
+    opacity: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    display: block;
+}
+
+
+/* except for the first one */
+
+.carousel.fade .item:first-child {
+    top: auto;
+    opacity: 0;
+    position: relative;
+}
+
+
+/* we making each time an item has the .active class make it visible */
+
+.carousel.fade .item.active {
+    opacity: 1;
+}
+
+
+/* hides the arrows in carousel, it shows them only if we rollover */
+
+.carousel-control {
+    opacity: 0;
+}
+
+.carouse-control.right,
+.carousel0control.left {
+    background-image: none;
+}
+
+
+/* we set the background of the div images */
+
+#featured .item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+}
+
+
+/** Page **/
+
+.page {
+    padding: 50px 0;
+}
+
+.page h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/** Page -- Overview **/
+
+#overview {
+    background-color: #E4D29D;
+    background-image: linear-gradient(to bottom, #EEF08A, #819A2D);
+    border-top: 20px solid rgba(238, 200, 86, 0.5);
+}
+
+
+/** Page -- Services **/
+
+.service {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#services img.icon {
+    display: block;
+    /* display:block to control width and height */
+    width: 80px;
+    margin: 0 auto;
+    /* to center if you use diplasy:block */
+    margin-bottom: 50px;
+}
+
+#services h3 {
+    margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 450px) and (max-width: 768px) {
+    .service p {
+        padding: 0 20%;
+    }
+}
+
+
+/** Page -- Solutions **/
+
+#solutions {
+    background-color: #E4D29D;
+    background-image: linear-gradient(to bottom, #E4D29D, #CDAE50);
+}
+
+.sol {
+    margin: 6px 0;
+}
+
+.sol h3 {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #6F4E36;
+    padding-bottom: 5px;
+}
+
+.sol p {
+    font-size: 0.9em;
+}
+
+.sol li {
+    font-size: 0.9em;
+}
+
+.sol img {
+    width: 100%;
+}
+
+
+/** Page -- Media **/
+
+#media {
+    padding: 0;
+}
+
+#media h2 {
+    display: none;
+}
+
+#media blockquote {
+    margin: 0;
+    padding: 0;
+    border-left: none;
+    min-height: 500px;
+    position: relative;
+}
+
+#media blockquote .quote {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px 5%;
+    position: absolute;
+    bottom: 0;
+    width: 75%;
+    font-weight: 400;
+    border-radius: 0 50px 0 0;
+}
+
+#media blockquote .quote:hover {
+    background-color: rgba(239, 240, 196, 0.9);
+}
+
+#media #yourstory {
+    background: url(../images/media_yourstory.png) no-repeat center center;
+    background-size: cover;
+}
+
+#media #businessworld {
+    background: url(../images/media_businessworld.png) no-repeat center center;
+    background-size: cover;
+}
+
+#media #youtube {
+    background: url(../images/media_youtube.png) no-repeat center center;
+    background-size: cover;
+}
+
+#media .quote {
+    font-size: 1.2em;
+    line-height: 110%;
+    font-weight: 400;
+}
+
+#media .quote .more,
+#media .quote .customer {
+    opacity: 0;
+    font-size: 0;
+    line-height: 0;
+    padding-top: 10px;
+}
+
+#media .quote:hover .more {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+    display: block;
+    opacity: 1;
+    font-size: 0.8em;
+    line-height: 120%;
+}
+
+#media .quote:hover .customer {
+    display: block;
+    opacity: 1;
+    font-size: 0.7em;
+    text-align: right;
+}
+
+#media .quote .intro::after {
+    content: "...";
+}
+
+#media .quote:hover .intro::after {
+    content: "";
+}
+
+
+/** Footer **/
+
+footer {
+    background: #586D74;
+    color: white;
+    font-size: 0.8em;
+    padding: 20px 0 40px 0;
+}
+
+footer a {
+    color: #E0E6AE;
+}
+
+footer a:hover {
+    color: #EEC856 !important;
+    /* Important means that will overide all the other versions of color */
+}
+
+footer .phone {
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #E0E6AE;
+}
+
+footer .navbar {
+    margin-bottom: 0;
+    min-height: 0;
+}
+
+footer .navbar-default {
+    background-color: transparent;
+    border: none;
+    margin-right: 40px;
+}
+
+footer .navbar-nav>li a {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-decoration: underline;
+    color: #EEC856 !important;
+}
+
+
+/** Loader for the page **/
+
+.loading {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10000;
+    background-color: #F3F3F3;
+    display: block;
+}
+
+.load {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 4%;
+    left: 49%;
+    border: 7px solid #EEF08A;
+    border-top: 7px solid #819A2D;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/** Back to top button **/
+
+.return {
+    width: 50px;
+    height: 40px;
+    background-color: #EEC856;
+    position: fixed;
+    top: 90%;
+    left: 80%;
+    z-index: 999;
+    cursor: pointer;
+    display: none;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+}
+
+.return:hover {
+    color: #E15D5F;
+}
