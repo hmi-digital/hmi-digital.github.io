@@ -316,6 +316,11 @@ header .inbody .navbar-brand span.subhead {
     background-size: cover;
 }
 
+#media #firstpost {
+    background: url(../images/media_firstpost.png) no-repeat center center;
+    background-size: cover;
+}
+
 #media .quote {
     font-size: 1.2em;
     line-height: 110%;
