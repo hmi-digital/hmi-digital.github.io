@@ -435,11 +435,78 @@ footer .navbar-nav>li a {
     }
 }
 
+#formview textarea {
+    height: 8.3em;
+}
+
+input,
+textarea {
+    font-size: 0.8em;
+    color: darkgray;
+    font-family: "Open Sans", sans-serif;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 0.9em;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+
+input.code,
+textarea.code {
+    font-family: "Open Sans", sans-serif;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #2A735B;
+    outline: none;
+    box-shadow: 0 0 5px 1px #359173;
+}
+
+form input,
+form textarea {
+    margin-bottom: 0.5em;
+}
+
+button,
+a.button {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 2px solid #359173;
+    color: #359173;
+    background: transparent;
+    line-height: 1em;
+    padding: 0.6em 0.9em;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover,
+a.button:hover {
+    border-color: #2A735B;
+    color: #2A735B;
+}
+
+button:hover.emphasis,
+a.button:hover.emphasis {
+    color: white;
+    background-color: #2A735B;
+}
+
+button[disabled],
+button[disabled]:hover,
+a.button[disabled],
+a.button[disabled]:hover {
+    color: #b0e2d2;
+    border-color: #b0e2d2;
+}
+
 
 /** Back to top button **/
 
 .return {
-    width: 50px;
+    text-align: center; 
+    width: 46px;
     height: 40px;
     background-color: #EEC856;
     position: fixed;
@@ -452,7 +519,7 @@ footer .navbar-nav>li a {
     outline: none;
     border-radius: 10px;
     color: white;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .return:hover {
